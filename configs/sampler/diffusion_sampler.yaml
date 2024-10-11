@@ -1,0 +1,21 @@
+heun_2nd:
+  rho: 13
+  sigma_min: 5e-4
+  sigma_max: 5
+  sigma_data: 0.0126
+  diffusion_steps: 48
+  S_noise: 1.003
+  S_churn: 5
+  S_tmin: 0.3
+  S_tmax: 2.0
+
+heun_2nd_sigma1:
+  rho: 13
+  sigma_min: 5e-4
+  sigma_max: 3
+  sigma_data: 0.0126
+  diffusion_steps: 32
+  S_noise: 1.000
+  S_churn: 5
+  S_tmin: 0.3
+  S_tmax: 2.0

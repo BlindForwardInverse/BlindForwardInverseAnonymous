@@ -1,0 +1,16 @@
+TrainDataset:
+  split_mode: "single_recording_env"
+  single_env_mic: "mic1"
+  target_sr: 44100
+  target_audio_len: 130944
+  ref_audio_len: 130944
+  target_transform_type: "power_ri"
+  ref_transform_type: "waveform"
+  threshold_db: -12.0
+  mono: True
+  len_epoch: 1000
+  num_data: False
+  graph_type: "single_effect"
+  perceptual_intensity: "default"
+  randomize_params: True
+  single_afx_name: False

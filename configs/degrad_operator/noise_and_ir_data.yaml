@@ -1,0 +1,6 @@
+noise_dataset: "/ssd4/inverse_problem/noise/"
+unseen_noise_dataset: "/ssd4/inverse_problem/noise_unseen/fsdnoisy18k_valid"
+rir_dataset: "/ssd4/inverse_problem/rir"
+unseen_rir_dataset: "/ssd4/inverse_problem/rir_unseen"
+micir_dataset: "/ssd4/inverse_problem/micir"
+unseen_micir_dataset: "/ssd4/inverse_problem/micir_unseen"

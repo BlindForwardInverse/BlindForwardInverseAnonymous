@@ -1,0 +1,293 @@
+hb1-single:
+#    ckpt: '/ssd3/doyo/ckpt/operator_rb/0913_13_hb1-single/last.ckpt'
+    ckpt: '/ssd3/doyo/ckpt/operator_rb/0926_hb1-single/last.ckpt'
+    model_configs:
+        modality: 'speech'
+        split_mode: 'single_recording_env'
+        single_env_mic: 'mic1'
+        target_sr: 44100
+        target_audio_len: 97792 # 512*191
+        ref_audio_len: 97792
+        len_epoch: 2000
+        default_chain_type: 'full_afx'
+        graph_type: 'single_effect'
+        data_domain: 'hybrid' # 'spec' or 'waveform'
+        n_fft: 2046
+        win_length: 2046
+        hop_length: 512
+        mse_each_domain: true
+        use_discriminator: true
+        discriminator_type: 'MRD'
+        separate_discriminator: true
+        cat_ref: true
+        use_ref_encoder: true
+        hybrid_bridge: false
+        hybrid_v2: true
+        encoder_channels: 128
+        embedding_size: 512
+        channel_mult: [1, 2, 4]
+        ds_factors: [4, 4, 4]
+        causal: false
+        with_t_attn: true
+        use_attn_pool: false
+        attn_pool_num_latents: 8
+        attn_pool_num_latents_mean_pooled: 4
+        cond_dim: 512 # must match the last channel of the encoder
+        cat_acoustic_token: false
+        num_time_pool: 12
+        partial_mean_pooled: false
+        unet_channels: 64
+        unet_dim_mults: [1, 1, 2, 2, 2] # 1 1 2 2 2
+        num_resnet_blocks: [2, 2, 4, 4, 4] # 2 2 4 8 8 
+        num_layer_attns: 2
+        num_layer_cross_attns: 2
+        attn_dim_head: 32
+        attn_heads: 16
+        ff_mult: 2.0
+        memory_efficient: true
+        unet_type: 'imagen'
+        learnable_sum: true
+
+hb1-multiple:
+    ckpt: '/ssd3/doyo/ckpt/operator_rb/0916_15_hb1-complex/last.ckpt'
+    model_configs:
+        modality: 'speech'
+        split_mode: 'single_recording_env'
+        single_env_mic: 'mic1'
+        target_sr: 44100
+        target_audio_len: 97792 # 512*191
+        ref_audio_len: 97792
+        len_epoch: 2000
+        default_chain_type: 'full_afx'
+        graph_type: 'complex'
+        data_domain: 'hybrid' # 'spec' or 'waveform'
+        n_fft: 2046
+        win_length: 2046
+        hop_length: 512
+        mse_each_domain: true
+        use_discriminator: true
+        discriminator_type: 'MRD'
+        separate_discriminator: true
+        cat_ref: true
+        use_ref_encoder: true
+        hybrid_bridge: false
+        hybrid_v2: true
+        encoder_channels: 128
+        embedding_size: 512
+        channel_mult: [1, 2, 4]
+        ds_factors: [4, 4, 4]
+        causal: false
+        with_t_attn: true
+        use_attn_pool: false
+        attn_pool_num_latents: 8
+        attn_pool_num_latents_mean_pooled: 4
+        cond_dim: 512 # must match the last channel of the encoder
+        cat_acoustic_token: false
+        num_time_pool: 12
+        partial_mean_pooled: false
+        unet_channels: 64
+        unet_dim_mults: [1, 1, 2, 2, 2] # 1 1 2 2 2
+        num_resnet_blocks: [2, 2, 4, 4, 4] # 2 2 4 8 8 
+        num_layer_attns: 2
+        num_layer_cross_attns: 2
+        attn_dim_head: 32
+        attn_heads: 16
+        ff_mult: 2.0
+        memory_efficient: true
+        unet_type: 'imagen'
+        learnable_sum: true
+
+hb1-cross_domain:
+    ckpt: '/ssd3/doyo/ckpt/operator_rb/0916_17_hb1-cross_modal/last.ckpt'
+    model_configs:
+        modality: 'cross_modal'
+        split_mode: 'single_recording_env'
+        single_env_mic: 'mic1'
+        target_sr: 44100
+        target_audio_len: 97792 # 512*191
+        ref_audio_len: 97792
+        len_epoch: 2000
+        default_chain_type: 'full_afx'
+        graph_type: 'single_effect'
+        data_domain: 'hybrid' # 'spec' or 'waveform'
+        n_fft: 2046
+        win_length: 2046
+        hop_length: 512
+        mse_each_domain: true
+        use_discriminator: true
+        discriminator_type: 'MRD'
+        separate_discriminator: true
+        cat_ref: true
+        use_ref_encoder: true
+        hybrid_bridge: false
+        hybrid_v2: true
+        encoder_channels: 128
+        embedding_size: 512
+        channel_mult: [1, 2, 4]
+        ds_factors: [4, 4, 4]
+        causal: false
+        with_t_attn: true
+        use_attn_pool: false
+        attn_pool_num_latents: 8
+        attn_pool_num_latents_mean_pooled: 4
+        cond_dim: 512 # must match the last channel of the encoder
+        cat_acoustic_token: false
+        num_time_pool: 12
+        partial_mean_pooled: false
+        unet_channels: 64
+        unet_dim_mults: [1, 1, 2, 2, 2] # 1 1 2 2 2
+        num_resnet_blocks: [2, 2, 4, 4, 4] # 2 2 4 8 8 
+        num_layer_attns: 2
+        num_layer_cross_attns: 2
+        attn_dim_head: 32
+        attn_heads: 16
+        ff_mult: 2.0
+        memory_efficient: true
+        unet_type: 'imagen'
+        learnable_sum: true
+
+hb1-multiple_env:
+    ckpt: '/ssd3/doyo/ckpt/operator_rb/0918_multiple_env/last.ckpt'
+    model_configs:
+        modality: 'speech'
+        split_mode: 'multiple_recording_env'
+        single_env_mic: 'mic1'
+        target_sr: 44100
+        target_audio_len: 97792 # 512*191
+        ref_audio_len: 97792
+        len_epoch: 2000
+        default_chain_type: 'full_afx'
+        graph_type: 'single_effect'
+        data_domain: 'hybrid' # 'spec' or 'waveform'
+        n_fft: 2046
+        win_length: 2046
+        hop_length: 512
+        mse_each_domain: true
+        use_discriminator: true
+        discriminator_type: 'MRD'
+        separate_discriminator: true
+        cat_ref: true
+        use_ref_encoder: true
+        hybrid_bridge: false
+        hybrid_v2: true
+        encoder_channels: 128
+        embedding_size: 512
+        channel_mult: [1, 2, 4]
+        ds_factors: [4, 4, 4]
+        causal: false
+        with_t_attn: true
+        use_attn_pool: false
+        attn_pool_num_latents: 8
+        attn_pool_num_latents_mean_pooled: 4
+        cond_dim: 512 # must match the last channel of the encoder
+        cat_acoustic_token: false
+        num_time_pool: 12
+        partial_mean_pooled: false
+        unet_channels: 64
+        unet_dim_mults: [1, 1, 2, 2, 2] # 1 1 2 2 2
+        num_resnet_blocks: [2, 2, 4, 4, 4] # 2 2 4 8 8 
+        num_layer_attns: 2
+        num_layer_cross_attns: 2
+        attn_dim_head: 32
+        attn_heads: 16
+        ff_mult: 2.0
+        memory_efficient: true
+        unet_type: 'imagen'
+        learnable_sum: true
+hb1-single_v2:
+    ckpt: '/ssd3/doyo/ckpt/operator_rb/hb1-sep_disc_env/last.ckpt'
+    model_configs:
+        modality: 'speech'
+        split_mode: 'single_recording_env'
+        single_env_mic: 'mic1'
+        target_sr: 44100
+        target_audio_len: 97792 # 512*191
+        ref_audio_len: 97792
+        len_epoch: 2000
+        default_chain_type: 'full_afx'
+        graph_type: 'single_effect'
+        data_domain: 'hybrid' # 'spec' or 'waveform'
+        n_fft: 2046
+        win_length: 2046
+        hop_length: 512
+        mse_each_domain: true
+        use_discriminator: true
+        discriminator_type: 'MRD'
+        separate_discriminator: true
+        cat_ref: true
+        use_ref_encoder: true
+        hybrid_bridge: false
+        hybrid_v2: true
+        encoder_channels: 128
+        embedding_size: 512
+        channel_mult: [1, 2, 4]
+        ds_factors: [4, 4, 4]
+        causal: false
+        with_t_attn: true
+        use_attn_pool: false
+        attn_pool_num_latents: 8
+        attn_pool_num_latents_mean_pooled: 4
+        cond_dim: 512 # must match the last channel of the encoder
+        cat_acoustic_token: false
+        num_time_pool: 12
+        partial_mean_pooled: false
+        unet_channels: 64
+        unet_dim_mults: [1, 1, 2, 2, 2] # 1 1 2 2 2
+        num_resnet_blocks: [2, 2, 4, 4, 4] # 2 2 4 8 8 
+        num_layer_attns: 2
+        num_layer_cross_attns: 2
+        attn_dim_head: 32
+        attn_heads: 16
+        ff_mult: 2.0
+        memory_efficient: true
+        unet_type: 'imagen'
+        learnable_sum: true
+
+#hb2-single-wo-codec:
+#    ckpt: '/ssd3/doyo/ckpt/operator_rb/hb2-sep_disc_nv/last.ckpt'
+#    model_configs:
+#        modality: 'speech'
+#        split_mode: 'single_recording_env'
+#        single_env_mic: 'mic1'
+#        target_sr: 44100
+#        target_audio_len: 97792 # 512*191
+#        ref_audio_len: 97792
+#        len_epoch: 2000
+#        default_chain_type: 'full_afx'
+#        graph_type: 'single_effect'
+#        data_domain: 'hybrid' # 'spec' or 'waveform'
+#        n_fft: 2046
+#        win_length: 2046
+#        hop_length: 512
+#        mse_each_domain: true
+#        use_discriminator: true
+#        discriminator_type: 'MRD'
+#        separate_discriminator: true
+#        cat_ref: true
+#        use_ref_encoder: true
+#        hybrid_bridge: false
+#        hybrid_v2: true
+#        encoder_channels: 128
+#        embedding_size: 512
+#        channel_mult: [1, 2, 4]
+#        ds_factors: [4, 4, 4]
+#        causal: false
+#        with_t_attn: true
+#        use_attn_pool: false
+#        attn_pool_num_latents: 8
+#        attn_pool_num_latents_mean_pooled: 4
+#        cond_dim: 512 # must match the last channel of the encoder
+#        cat_acoustic_token: false
+#        num_time_pool: 12
+#        partial_mean_pooled: false
+#        unet_channels: 64
+#        unet_dim_mults: [1, 1, 2, 2, 2] # 1 1 2 2 2
+#        num_resnet_blocks: [2, 2, 4, 4, 4] # 2 2 4 8 8 
+#        num_layer_attns: 2
+#        num_layer_cross_attns: 2
+#        attn_dim_head: 32
+#        attn_heads: 16
+#        ff_mult: 2.0
+#        memory_efficient: true
+#        unet_type: 'imagen'
+#        learnable_sum: true

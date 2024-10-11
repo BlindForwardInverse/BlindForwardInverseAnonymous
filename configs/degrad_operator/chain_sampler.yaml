@@ -1,0 +1,105 @@
+full_afx:
+    fixed_order : False
+    chain_len:
+        keys: [1, 2, 3, 4,]
+        weights: [2, 2, 1, 1]
+    perceptual_attribute:
+        keys: ['bandlimiter', 'distortion', 'compressor',
+               'equalization', 'reverb',  'micir_conv', 'add_noise',
+               'delay', 'modulation', 'codec']
+        weights: [3, 5, 5,
+                  3, 40, 4, 15,
+                  20, 20, 3]
+
+full_afx_v2:
+    fixed_order : False
+    chain_len:
+        keys: [1, 2, 3, 4]
+        weights: [2, 2, 1, 1]
+    perceptual_attribute:
+        keys: ['bandlimiter', 'distortion', 'compressor',
+               'equalization', 'reverb',  'micir_conv', 'add_noise',
+               'delay', 'modulation']
+        weights: [3, 10, 5,
+                  3, 40, 4, 20,
+                  10, 10]
+
+speech_enhancement:
+    fixed_order : False
+    chain_len:
+        keys: [1, 2, 3, 4,]
+        weights: [2, 2, 1, 1]
+    perceptual_attribute:
+        keys: ['bandlimiter', 'distortion', 'compressor',
+               'equalization', 'reverb',  'micir_conv', 'add_noise',
+               'delay', 'modulation', 'codec']
+        weights: [2, 10, 2,
+                  2, 20, 2, 20,
+                  2, 1, 1]
+
+complex_graph:
+    fixed_order : False
+    chain_len:
+        keys: [1, 2]
+        weights: [2, 1]
+    perceptual_attribute:
+        keys: ['bandlimiter', 'distortion', 'compressor',
+               'equalization', 'reverb',  'micir_conv', 'add_noise',
+               'delay', 'modulation', 'codec']
+        weights: [1, 2, 1,
+                  1, 4, 2, 2,
+                  1, 1, 1]
+
+monolithic_graph:
+    fixed_order : False
+    chain_len:
+        keys: [1, 2, 3, 4, 5]
+        weights: [1, 1, 1, 1, 1]
+    perceptual_attribute:
+        keys: ['bandlimiter', 'distortion', 'compressor',
+               'equalization', 'reverb',  'micir_conv', 'add_noise',
+               'delay', 'modulation', 'codec']
+        weights: [1, 2, 1,
+                  1, 4, 2, 2,
+                  1, 1, 1]
+
+valid_afx:
+    fixed_order : False
+    chain_len:
+        keys: [1, 2, 3]
+        weights: [2, 2, 1]
+    perceptual_attribute:
+        keys: ['bandlimiter', 'distortion', 'compressor',
+               'equalization', 'reverb',  'micir_conv', 'add_noise',
+               'delay', 'modulation', 'codec']
+        weights: [1, 1, 1,
+                  1, 1, 1, 1,
+                  1, 1, 1]
+
+modulation:
+    fixed_order : False
+    chain_len:
+        keys: [1, 2, 3, 4, 5]
+        weights: [5, 4, 3, 2, 1]
+    perceptual_attribute:
+        keys: ['modulation']
+        weights: [1]
+
+noise_only:
+    fixed_order : False
+    chain_len:
+        keys: [1]
+        weights: [1]
+    perceptual_attribute:
+        keys: ['add_noise']
+        weights: [1]
+
+codec:
+    fixed_order : False
+    chain_len:
+        keys: [1]
+        weights: [1]
+    perceptual_attribute:
+        keys: ['codec']
+        weights: [1]
+

@@ -1,0 +1,36 @@
+44100:
+    train:
+        # Target and Reference audio are sampled from the same dataset.
+        single_recording_env:
+            - '/ssd4/inverse_problem/speech/speech48k/VCTK/train' # MIC 1
+
+        multiple_recording_env:
+            - '/ssd4/inverse_problem/speech/speech44k/hi_fi_tts_v0'
+            - '/ssd4/inverse_problem/speech/speech44k/HUI-Audio-Corpus-German'
+            - '/ssd1/speech/speech_48k/multilingual_reading/Training/01.원천데이터'
+#            - '/ssd4/inverse_problem/instruments/singing/VocalSet'
+#            - '/ssd4/inverse_problem/instruments/singing/OpenSinger'
+
+        # Target and Reference audio are sampled from the different dataset.
+        unmatched_recording_env:
+            - '/ssd4/inverse_problem/speech/speech44k/hi_fi_tts_v0'
+            - '/ssd4/inverse_problem/speech/speech44k/HUI-Audio-Corpus-German'
+            - '/ssd1/speech/speech_48k/multilingual_reading/Training/01.원천데이터'
+
+    valid:
+        vctk1:
+            - '/ssd4/inverse_problem/speech/speech48k/VCTK/valid' # MIC 1
+        vctk2:
+            - '/ssd4/inverse_problem/speech/speech48k/VCTK/valid' # MIC 2
+        daps:
+            - '/ssd4/inverse_problem/speech/speech44k/daps_parsed/clean'
+
+    prerendered_valid:
+        vctk1: '/ssd4/doyo/valid_set/vctk1'
+        vctk2: '/ssd4/doyo/valid_set/vctk2'
+        daps: '/ssd4/doyo/valid_set/daps'
+
+16000:
+  train: '/ssd4/inverse_problem/speech/speech16k/LibriSpeech/train-clean-360'
+  ref: '/ssd4/inverse_problem/speech/speech16k/voicebank-demand-16k/clean_trainset_wav'
+  valid: '/ssd4/inverse_problem/speech/speech16k/LibriSpeech/test-clean'

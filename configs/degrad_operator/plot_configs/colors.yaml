@@ -1,0 +1,28 @@
+colors:
+  header_color: 'darkslategrey'
+  header_colors:
+    output: 'w'
+    input: 'w'
+    controller: '#FFFF88'
+    2nd_order_filter: '#EEEEEE'
+    ladder: '#EEEEEE'
+    higher_order_filter: '#DDDDDD'
+    crossover: '#CDEB8B'
+    memoryless_nonlinearity: '#FFCCCC'
+    dynamic_range_controller: '#FFCC99'
+    modulation_effect: '#BAC8D3'
+    delay_and_reverb: '#CCE5FF'
+    utility: '#F9F7ED'
+    phase_vocoder: '#E1D5E7'
+    codec: '#A1E5B7'
+  header_textcolor: 'k'
+  lets:
+    inlet_color: 'royalblue'
+    param_color: 'grey'
+    outlet_color: 'orangered'
+    
+inout_module:
+  size: .8
+  linewidth: .7
+  input_color: 'b' #'royalblue'
+  output_color: 'r' #'orangered'

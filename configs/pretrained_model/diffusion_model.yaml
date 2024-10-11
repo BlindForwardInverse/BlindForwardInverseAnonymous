@@ -1,0 +1,34 @@
+hybrid_hb1:
+    ckpt: "/ssd3/doyo/diffusion_v2/diffusion_v2/0925_hybrid_retry/ckpt_diffusion_epoch=104-step=315000.ckpt"
+    model_configs:
+        config_path: "configs/pretrained_model/forward_operator.yaml"
+        config_name: "hb1-single"
+
+        split_mode: "single_recording_env"
+        single_env_mic: "mic1"
+        audio_len: 97792  # 512 * 191
+        batch_size: 6
+        target_sr: 44100
+        len_epoch: 3000
+        transform_type: "power_ri"
+        default_chain_type: "speech_enhancement"
+
+        data_domain: "hybrid"  # 'spec' or 'waveform'
+        n_fft: 2046
+        win_length: 2046
+        hop_length: 512
+        graph_type: "single_effect"
+
+        unet_channels: 64
+        num_resnet_blocks: [2, 2, 4, 4, 8]
+        dim_mults: [1, 2, 2, 2, 4]
+        num_layer_attns: 2
+        num_layer_cross_attns: 2
+        attn_dim_head: 64
+        attn_heads: 8
+
+        pretrained_encoder: null
+        use_ref_encoder: true
+        cond_dim: 512
+        ousde: false
+        use_discriminator: false

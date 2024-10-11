@@ -1,0 +1,67 @@
+envfollower: env
+lfo: lfo
+stereo_lfo: slfo
+lowpass: lpf
+lowpass_ladder: lpl
+bandpass: bpf
+bandpass_ladder: bpl
+highpass: hpf
+highpass_ladder: hpl
+bandreject: brj
+lowshelf: ls
+bell: bell
+highshelf: hs
+crossover: crs
+distortion: dist
+bitcrush: bit
+compressor: cmp
+limiter: lim
+noisegate: gat
+expander: exp
+chorus: cho
+vibrato: vib
+flanger: fla
+phaser: pha
+delay: del
+pingpong: pon
+mono_reverb: rvb
+reverb: rev
+pitchshift: pits
+mix: mix
+panning: pan
+imager: img
+midside: ms
+stereo: ste
+kick: kick
+snare: sna
+hat: hat
+tom: tom
+ride: ride
+crash: cra
+in: in
+out: out
+
+speech: spc
+vocal: voc
+singing: sing
+guitar: gui
+drums: drum
+noise : n
+lowpass_noise: lpn
+rir: rir
+micir_0: mcir
+micir: mcir
+hard_clipper: hclp
+soft_clipper: scli
+convolution: conv
+adder: add
+tremolo: tre
+svf: svf
+lowpass_butter: lowb
+highpass_butter : higb
+bandpass_butter : bndb
+inverted_compressor : icmp
+libmp3lame : mp3
+aac : aac
+libvorbis : ogg
+libopus : opus

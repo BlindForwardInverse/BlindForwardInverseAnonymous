@@ -1,0 +1,12 @@
+frequency_hz: Hz
+centre_frequency_hz: Hz
+rate_hz: Hz
+delay_seconds: s
+centre_delay_ms: ms
+attack_ms: ms
+release_ms: ms
+gain_db: dB
+threshold_db: dB
+feedback_gain_db: dB
+knee_db: dB
+lfo_frequency_hz: Hz

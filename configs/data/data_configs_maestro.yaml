@@ -1,0 +1,14 @@
+44100:
+    train:
+        # Target and Reference audio are sampled from the same dataset.
+        maestro_single: '/ssd4/inverse_problem/instruments/piano/maestro-v3_again/maestro-v3.0.0_parsed'
+    valid:
+        maestro_single: '/ssd4/inverse_problem/instruments/piano/maestro_valid_parsed'
+
+    prerendered_valid:
+        maestro_single: '/ssd4/doyo/valid_maestro'
+
+16000:
+  train: '/ssd4/inverse_problem/speech/speech16k/LibriSpeech/train-clean-360'
+  ref: '/ssd4/inverse_problem/speech/speech16k/voicebank-demand-16k/clean_trainset_wav'
+  valid: '/ssd4/inverse_problem/speech/speech16k/LibriSpeech/test-clean'

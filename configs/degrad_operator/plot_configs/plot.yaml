@@ -1,0 +1,114 @@
+structure:
+  width: # for default structure.
+    big: 600 # 460
+    default: 80
+    mini: 170
+  height: # for default structure.
+    big: 300
+    default: 180
+    mini: 150
+  margin_x:
+    big: 80
+    default: 80
+    mini: 50
+  margin_y:
+    big: 80
+    default: 90
+    mini: 80
+  wrapper_height_multiplier:
+    big: 400
+    default: 200
+    mini: 200
+  padding_y:
+    big: 50
+    default: 30
+    mini: 30
+  wrapper_margin_y:
+    big: 100
+    default: 40
+    mini: 100
+
+node:
+  width:
+    big: 200
+    default: 120
+    mini: 90
+  height: 
+    big: 180
+    default: 120
+    mini: 90
+  margin:
+    big: 60
+    default: 50
+    mini: 40
+  
+  let_padding_y:
+    big: 20
+    default: 15
+    mini: None
+  let_width:
+    big: 10
+    default: 10
+    mini: None
+  let_height:
+    big: 15
+    default: 10
+    mini: None
+  let_interval_y:
+    big: 30
+    default: 30
+    mini: None
+  let_offset_y:
+    big: 30
+    default: 7
+    mini: 80
+  let_offset_x: #inlet_offset_x = let_width
+    big: 10
+    default: 10
+    mini: None
+
+  name_offset_y: 
+    big: 30 # node_height / 5
+    default: 68 # node_height / 2 + 8
+    mini: 50 # node_height / 2
+  lfo_name_offset_y:
+    big: None
+    default: 48 # node_height / 4 + 18
+    mini: 25 # node_height / 4 + 13
+  lfo_offset_y:
+    big: 40
+    default: 40
+    mini: 40
+  crossover_offset_y:
+    big: 40
+    default: 40
+    mini: 40
+
+  desc_offset_x:
+    big: 15
+    default: None
+    mini: None
+  desc_offset_y: 
+    big: 40
+    default: None
+    mini: None
+  desc_margin_y:
+    big: 20
+    default: None
+    mini: None
+
+edge:
+  line_thickness:
+    big: 3
+    default: 5
+    mini: 3
+
+ui:
+  font_size:
+    big: 20
+    default: 30
+    mini: 25
+  small_font_size:
+    big: 12
+    default: 15
+    mini: 15

@@ -1,0 +1,25 @@
+EfficientUnet:
+  unet_channels: 128
+  unet_dim_mult: [1, 2, 4, 8]
+  num_resnet_blocks: [2, 4, 8, 8]
+  num_layer_attns: 1
+  num_layer_cross_attns: 4
+  attn_heads: 8
+  ff_mult: 2.0
+  memory_efficient: True
+  use_linear_attn: False
+  use_linear_cross_attn: False
+
+MFTAAEncoder:
+  phase_encoder_channel: 4
+  model_channels: 32
+  embedding_size: 128
+  channel_mult: [1, 2, 4, 8]
+  ds_factors: [4, 2, 2, 2]
+  return_intermediate_features: True
+  tfcm_layer: 6
+  nerb: 256
+  target_sr: 44100
+  causal: False
+  win_len: 510
+  win_hop: 128

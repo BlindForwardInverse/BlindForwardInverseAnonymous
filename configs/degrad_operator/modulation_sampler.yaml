@@ -1,0 +1,55 @@
+chorus:
+    modulation_type: lowpassed_noise
+    parameters:
+      cutoff_freq:
+        distribution: uniform
+        sampling_range: [12, 20]
+      seed:
+        distribution: randint
+        sampling_range: [0, 999999]
+    inlet: modulation
+
+vibrato:
+    modulation_type: lfo
+    parameters:
+      lfo_frequency_hz:
+        distribution: uniform
+        sampling_range: [5, 8]
+      offset: 
+          distribution: uniform
+          sampling_range: [-3.14, 3.14]
+    inlet: modulation
+
+flanger:
+    modulation_type: lfo
+    parameters:
+      lfo_frequency_hz:
+        distribution: uniform
+        sampling_range: [0.5, 1]
+      offset: 
+          distribution: uniform
+          sampling_range: [-3.14, 3.14]
+    inlet: modulation
+
+phaser:
+    modulation_type: lfo
+    parameters:
+      lfo_frequency_hz:
+        distribution: uniform
+        sampling_range: [0.25, 1]
+
+      offset: 
+          distribution: uniform
+          sampling_range: [-3.14, 3.14]
+    inlet: modulation
+
+tremolo:
+    modulation_type: lfo
+    parameters:
+      lfo_frequency_hz:
+        distribution: uniform
+        sampling_range: [5, 14]
+      offset: 
+          distribution: uniform
+          sampling_range: [-3.14, 3.14]
+    inlet: modulation
